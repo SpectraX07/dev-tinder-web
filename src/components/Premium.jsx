@@ -27,11 +27,11 @@ const Premium = () => {
       { withCredentials: true }
     );
 
-    const { amount, keyId, currency, notes, orderId } = order.data;
+    const { amount, keyId, currency, notes, orderId } = order.data.data;
 
     const options = {
       key: keyId,
-      amount,
+      amount: amount,
       currency,
       name: "Dev Tinder",
       description: "Connect to other developers",
@@ -64,7 +64,7 @@ const Premium = () => {
             <li> - 3 months</li>
           </ul>
           <button
-            onClick={() => handleBuyClick("gold")}
+            onClick={() => handleBuyClick("silver")}
             className="btn btn-secondary"
           >
             Buy Silver
