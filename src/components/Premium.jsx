@@ -9,11 +9,11 @@ const Premium = () => {
   }, []);
 
   const verifyPremiumUser = async () => {
-    const res = await axios.get(BASE_URL + "/premium/verify", {
+    const res = await axios.get(BASE_URL + "/is-premium", {
       withCredentials: true,
     });
 
-    if (res.data.isPremium) {
+    if (res.data.data.isPremium) {
       setIsUserPremium(true);
     }
   };
