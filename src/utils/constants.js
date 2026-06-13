@@ -4,6 +4,4 @@ export const BASE_URL =
     : '/api/v1/user';
 
 export const SOCKET_URL =
-  location.hostname === 'localhost'
-    ? 'http://localhost:5000/'
-    : 'https://devtinder.subratajana.com';
+  location.hostname === 'localhost' ? 'http://localhost:5000/' : '';
